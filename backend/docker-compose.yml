@@ -1,0 +1,6 @@
+version: '3.4'
+
+services:
+  
+  stefaninidb:
+    image: mcr.microsoft.com/mssql/server:2017-latest
