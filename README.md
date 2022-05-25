@@ -1,9 +1,22 @@
 # DESAFIO BACKEND STEFANINI
 
-<h2>PARA SUBIR O PROJETO IR NA PASTA BACKEND E RODAR O COMANDO ABAIXO: </h2>
+<h2>DADOS DO PROJETO: </h2>
 <br />
-<code>docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d</code>
+- .NET 6.0<br />
+- VISUAL STUDIO 2022 COMMUNITY<br />
+- DOCKER COMPOSE <br />
+- DOCKER
+
 <br />
+<h3>PACOTES E FRAMEWORKS UTILIZADOS</h3>
+<br />
+- ENTITY FRAMEWORK CORE<br />
+- MEDIATR<br />
+- MIGRATION
+
+<h3>PRATICAS UTILIZADAS: </h3>
+- SOLID <br />
+- CQRS 
 
 <br />
 <h2>LINK DO SWAGGER: </h2>
