@@ -1,0 +1,17 @@
+C:\Projetos\stefanini\Stefanini.Infrastructure\bin\Debug\net6.0\Stefanini.Infrastructure.deps.json
+C:\Projetos\stefanini\Stefanini.Infrastructure\bin\Debug\net6.0\Stefanini.Infrastructure.dll
+C:\Projetos\stefanini\Stefanini.Infrastructure\bin\Debug\net6.0\Stefanini.Infrastructure.pdb
+C:\Projetos\stefanini\Stefanini.Infrastructure\bin\Debug\net6.0\Stefanini.Domain.dll
+C:\Projetos\stefanini\Stefanini.Infrastructure\bin\Debug\net6.0\Stefanini.Domain.pdb
+C:\Projetos\stefanini\Stefanini.Infrastructure\obj\Debug\net6.0\Stefanini.Infrastructure.csproj.AssemblyReference.cache
+C:\Projetos\stefanini\Stefanini.Infrastructure\obj\Debug\net6.0\Stefanini.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\stefanini\Stefanini.Infrastructure\obj\Debug\net6.0\Stefanini.Infrastructure.AssemblyInfoInputs.cache
+C:\Projetos\stefanini\Stefanini.Infrastructure\obj\Debug\net6.0\Stefanini.Infrastructure.AssemblyInfo.cs
+C:\Projetos\stefanini\Stefanini.Infrastructure\obj\Debug\net6.0\Stefanini.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Projetos\stefanini\Stefanini.Infrastructure\obj\Debug\net6.0\Stefanini.Infrastructure.csproj.CopyComplete
+C:\Projetos\stefanini\Stefanini.Infrastructure\obj\Debug\net6.0\Stefanini.Infrastructure.dll
+C:\Projetos\stefanini\Stefanini.Infrastructure\obj\Debug\net6.0\refint\Stefanini.Infrastructure.dll
+C:\Projetos\stefanini\Stefanini.Infrastructure\obj\Debug\net6.0\Stefanini.Infrastructure.pdb
+C:\Projetos\stefanini\Stefanini.Infrastructure\obj\Debug\net6.0\ref\Stefanini.Infrastructure.dll
+C:\Projetos\stefanini\Stefanini.Infrastructure\bin\Debug\net6.0\Stefanini.Application.dll
+C:\Projetos\stefanini\Stefanini.Infrastructure\bin\Debug\net6.0\Stefanini.Application.pdb

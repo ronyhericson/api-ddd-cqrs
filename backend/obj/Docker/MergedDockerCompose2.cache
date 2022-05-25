@@ -1,0 +1,56 @@
+networks:
+  mssql-network:
+    driver: bridge
+services:
+  stefanini.api:
+    build:
+      context: C:\Projetos\stefanini
+      dockerfile: Stefanini.API/Stefanini.API/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Stefanini.API
+      target: base
+    container_name: Stefanini.API
+    depends_on:
+      stefaninidb:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      ConnectionStrings:ConnectionString: Server=stefaninidb;Database=stefaninidb;User
+        Id=sa;Password=SwN12345678
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: stefaniniapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net6.0/Stefanini.API.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - target: 80
+    - target: 443
+    tty: true
+    volumes:
+    - C:\Projetos\stefanini\Stefanini.API\Stefanini.API:/app:rw
+    - C:\Users\Usuario\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\Usuario\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Usuario\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\Usuario\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Projetos\stefanini:/src:rw
+  stefaninidb:
+    container_name: stefaninidb
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: SwN12345678
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    networks:
+      mssql-network: {}
+    ports:
+    - published: 1433
+      target: 1433
+    restart: always
+version: '3.4'

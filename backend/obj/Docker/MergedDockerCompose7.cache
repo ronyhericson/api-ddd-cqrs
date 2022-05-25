@@ -1,0 +1,42 @@
+networks:
+  mssql-network:
+    driver: bridge
+services:
+  stefanini.api:
+    build:
+      context: C:\Projetos\stefanini
+      dockerfile: Stefanini.API/Stefanini.API/Dockerfile
+    command:
+    - dotnet
+    - ef
+    - database update
+    depends_on:
+      stefaninidb:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      ConnectionStrings:ConnectionString: Server=stefaninidb;Database=stefaninidb;User
+        Id=sa;Password=SwN12345678
+    image: stefaniniapi
+    networks:
+      mssql-network: {}
+    ports:
+    - published: 8001
+      target: 80
+    volumes:
+    - C:\Users\Usuario\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Usuario\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  stefaninidb:
+    container_name: stefaninidb
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: SwN12345678
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    networks:
+      mssql-network: {}
+    ports:
+    - published: 1433
+      target: 1433
+    restart: always
+version: '3.4'
