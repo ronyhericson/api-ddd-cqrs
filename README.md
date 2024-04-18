@@ -1,5 +1,3 @@
-# STEFANINI
-
 <h2>DADOS DO PROJETO: </h2>
 <br />
 - .NET 6.0<br />
